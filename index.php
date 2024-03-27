@@ -60,28 +60,34 @@
       <label>Correo:</label>
       <input type="text" name="correo" placeholder="ingresa el correo personal">
       <!--seccion formacion academica -->
-      <label>FORMACION ACADEMICA.</label><br>
-      <label>Nombre de la institución:</label>
-      <input type="text" name="institucion">
-      <label>Titulo obtenido:</label>
-      <input type="text" name="titulo_obtenido" placeholder="primaria/secundaria/otro">
-      <label>Año:</label>
-      <input type="text" name="año_graduacion" placeholder="ingresa el año de graduación">
+      <div id="formacion_academica">
+        <div id="grupo_formacion_academica" class="div_grupo_auxiliar">
+          <label>FORMACION ACADEMICA.</label><br>
+          <label>Nombre de la institución:</label>
+          <input type="text" name="institucion[]">
+          <label>Titulo obtenido:</label>
+          <input type="text" name="titulo_obtenido[]" placeholder="primaria/secundaria/otro">
+          <label>Año:</label>
+          <input type="text" name="año_graduacion[]" placeholder="ingresa el año de graduación">
+        </div>
+      </div>
+      <button type="button" onclick="agregar_referencias('formacion_academica')">agregar formación acádemica</button>
+      <button type="button" onclick="eliminar_referencias('formacion_academica')">eliminar formación acádemica</button>
       <!--seccion experiencia laboral -->
       <div id="experiencia_laboral">
         <div id="grupo_experiencia_laboral" class="div_grupo_auxiliar">
           <label>EXPERIENCIA LABORAL.</label><br>
           <label>Nombre de la empresa:</label>
-          <input type="text" name="nombre_empresa">
+          <input type="text" name="nombre_empresa[]">
           <label>Cargo ocupado:</label>
-          <input type="text" name="cargo_ocupado">
+          <input type="text" name="cargo_ocupado[]">
           <label>Nombre del jefe:</label>
-          <input type="text" name="nombre_jefe">
+          <input type="text" name="nombre_jefe[]">
           <label>Telefono:</label>
-          <input type="text" name="telefono_empresa" placeholder="numero del telefono de la empresa">
+          <input type="text" name="telefono_empresa[]" placeholder="numero del telefono de la empresa">
           <label>Duración en la empresa:</label>
-          <input type="text" name="numero_duracion_empresa ">
-          <select name="unidad_duracion_empresa">
+          <input type="text" name="numero_duracion_empresa[]">
+          <select name="unidad_duracion_empresa[]">
             <option value="año">Año</option>
             <option value="años">Años</option>
             <option value="mes">Mes</option>
@@ -96,28 +102,33 @@
         <div id="grupo_referencia_familiar" class="div_grupo_auxiliar">
           <label>REFERENCIAS FAMILIARES.</label><br>
           <label>Nombre de la referencia:</label>
-          <input type="text" name="nombre_referencia">
+          <input type="text" name="nombre_referencia[]">
           <label>Parentesco de la referencia:</label>
-          <input type="text" name="parentesco_referencia" placeholder="mamá/papá/hermano/tío/etc.">
+          <input type="text" name="parentesco_referencia[]" placeholder="mamá/papá/hermano/tío/etc.">
           <label>Ocupacion de la referencia:</label>
-          <input type="text" name="ocupacion_referencia">
+          <input type="text" name="ocupacion_referencia[]">
           <label>Celular de la referencia:</label>
-          <input type="text" name="celular_referencia">
+          <input type="text" name="celular_referencia[]">
         </div>
       </div>
-      <button type="button" onclick="agregar_referencias('referencias_familiares')">agregar referencia</button>
-      <button type="button" onclick="eliminar_referencias('referencias_familiares')">eliminar referencia</button>
+      <button type="button" onclick="agregar_referencias('referencias_familiares')">agregar referencia familiar</button>
+      <button type="button" onclick="eliminar_referencias('referencias_familiares')">eliminar referencia familiar</button>
       <!--seccion referencias personales -->
-      <label>REFERENCIAS PERSONAL.</label><br>
-      <label>Nombre de la referencia:</label>
-      <input type="text" name="nombre_referencia_personal">
-      <label>Ocupacion de la referencia:</label>
-      <input type="text" name="ocupacion_referencia_personal">
-      <label>Celular de la referencia:</label>
-      <input type="text" name="celular_referencia_personal">
+      <div id="referencias_personales">
+        <div id="grupo_referencia_personal" class="div_grupo_auxiliar">
+          <label>REFERENCIAS PERSONAL.</label><br>
+          <label>Nombre de la referencia:</label>
+          <input type="text" name="nombre_referencia_personal[]">
+          <label>Ocupacion de la referencia:</label>
+          <input type="text" name="ocupacion_referencia_personal[]">
+          <label>Celular de la referencia:</label>
+          <input type="text" name="celular_referencia_personal[]">
+        </div>
+      </div>
+      <button type="button" onclick="agregar_referencias('referencias_personales')">agregar referencia personal</button>
+      <button type="button" onclick="eliminar_referencias('referencias_personales')">eliminar referencia personal</button>
       <!--enviar formulario -->
       <input type="submit" value="enviar">
-
     </form>
   </div>
 </body>
