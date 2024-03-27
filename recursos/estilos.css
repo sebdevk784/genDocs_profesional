@@ -30,11 +30,11 @@ input:focus{
     
 }
 
-.grupo_referencia_familiar{
+.div_grupo_auxiliar{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.grupo_referencia_familiar input{
+.div_grupo_auxiliar input{
     width: 160%;
 }

@@ -16,8 +16,8 @@
   <!--Scrip para el formulario -->
   <script>
     //crear campo de referencia
-    function agregar_referencia_familiar() {
-      var div_referencia_familiar = document.getElementById('referencias_familiares');
+    function agregar_referencias(idContenedor) {
+      var div_referencia_familiar = document.getElementById(idContenedor);
       //clonar los campos de referencia
       var ultimos_inputs_referencia = div_referencia_familiar.lastElementChild;
       var clon_referencia_familiar = ultimos_inputs_referencia.cloneNode(true);
@@ -32,8 +32,8 @@
 
     }
     //funcion para eliminar divs
-    function eliminar_referencia_familiar() {
-      var div_referencia_familiar = document.getElementById('referencias_familiares');
+    function eliminar_referencias(idContenedor) {
+      var div_referencia_familiar = document.getElementById(idContenedor);
       if (div_referencia_familiar.children.length > 1) {
         div_referencia_familiar.removeChild(div_referencia_familiar.lastElementChild);
       }
@@ -68,26 +68,32 @@
       <label>Año:</label>
       <input type="text" name="año_graduacion" placeholder="ingresa el año de graduación">
       <!--seccion experiencia laboral -->
-      <label>EXPERIENCIA LABORAL.</label><br>
-      <label>Nombre de la empresa:</label>
-      <input type="text" name="nombre_empresa">
-      <label>Cargo ocupado:</label>
-      <input type="text" name="cargo_ocupado">
-      <label>Nombre del jefe:</label>
-      <input type="text" name="nombre_jefe">
-      <label>Telefono:</label>
-      <input type="text" name="telefono_empresa" placeholder="numero del telefono de la empresa">
-      <label>Duración en la empresa:</label>
-      <input type="text" name="numero_duracion_empresa ">
-      <select name="unidad_duracion_empresa">
-        <option value="año">Año</option>
-        <option value="años">Años</option>
-        <option value="mes">Mes</option>
-        <option value="meses">Meses</option>
-      </select>
+      <div id="experiencia_laboral">
+        <div id="grupo_experiencia_laboral" class="div_grupo_auxiliar">
+          <label>EXPERIENCIA LABORAL.</label><br>
+          <label>Nombre de la empresa:</label>
+          <input type="text" name="nombre_empresa">
+          <label>Cargo ocupado:</label>
+          <input type="text" name="cargo_ocupado">
+          <label>Nombre del jefe:</label>
+          <input type="text" name="nombre_jefe">
+          <label>Telefono:</label>
+          <input type="text" name="telefono_empresa" placeholder="numero del telefono de la empresa">
+          <label>Duración en la empresa:</label>
+          <input type="text" name="numero_duracion_empresa ">
+          <select name="unidad_duracion_empresa">
+            <option value="año">Año</option>
+            <option value="años">Años</option>
+            <option value="mes">Mes</option>
+            <option value="meses">Meses</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" onclick="agregar_referencias('experiencia_laboral')">agregar experiencia</button>
+      <button type="button" onclick="eliminar_referencias('experiencia_laboral')">eliminar experiencia</button>
       <!--seccion referencias familiares -->
-      <div id="referencias_familiares" class="referencias_familiares">
-        <div id="grupo_referencia_familiar" class="grupo_referencia_familiar">
+      <div id="referencias_familiares">
+        <div id="grupo_referencia_familiar" class="div_grupo_auxiliar">
           <label>REFERENCIAS FAMILIARES.</label><br>
           <label>Nombre de la referencia:</label>
           <input type="text" name="nombre_referencia">
@@ -99,8 +105,8 @@
           <input type="text" name="celular_referencia">
         </div>
       </div>
-      <button type="button" onclick="agregar_referencia_familiar()">agregar referencia</button>
-      <button type="button" onclick="eliminar_referencia_familiar()">eliminar referencia</button>
+      <button type="button" onclick="agregar_referencias('referencias_familiares')">agregar referencia</button>
+      <button type="button" onclick="eliminar_referencias('referencias_familiares')">eliminar referencia</button>
       <!--seccion referencias personales -->
       <label>REFERENCIAS PERSONAL.</label><br>
       <label>Nombre de la referencia:</label>
