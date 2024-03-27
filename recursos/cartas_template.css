@@ -1,0 +1,39 @@
+body, h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.contenido{
+   margin-left: 3cm;
+   margin-right: 3cm;
+   margin-bottom: 2.5cm;
+   
+}
+header{
+
+    background-color: #e0e0e0;
+    height: 2.5cm;
+}
+h1{
+ text-align: center;
+ margin: 0;
+ padding-top: 0.6cm;
+ text-decoration: underline;
+  
+}
+h3{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: right;
+
+}
+h4, .firma{
+    margin: 0;
+}
+
+.cuerpo_carta{
+    text-align: justify;
+}
+
+.atentamente{
+    margin-bottom: 60px;
+}
