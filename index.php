@@ -40,7 +40,7 @@
     }
   </script>
   <div class="formulario">
-    <form>
+    <form action="hoja_vida_template.php" method="POST">
       <!--seccion datos personales -->
       <label>DATOS PERSONALES.</label><br>
       <label>Nombre:</label>
