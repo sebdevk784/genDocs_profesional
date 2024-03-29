@@ -54,11 +54,41 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
 <body>
     <!-- informacion del perfil profesional -->
     <div class="perfil_profesional">
-
+        <h1><?php echo $nombre ?></h1>
+        <h4>PERFIL PROFESIONAL</h4>
+        <p>Soy una persona comprometida con la excelencia y la eficiencia en mi trabajo. Me considero proactivo/a
+            y tengo una gran capacidad de aprendizaje. Mi enfoque se centra en resolver problemas de manera ágil y
+            consistente, además de colaborar efectivamente en equipo. Mi objetivo es contribuir al éxito de la
+            organización y crecer profesionalmente en un entorno dinámico, manteniendo siempre una actitud
+            positiva para abordar cualquier tarea que se me encomiende</p>
     </div>
     <!--datos personales -->
     <div class="datos_personales">
-
+        <h3>DATOS PERSONALES</h3>
+        <p><?php if ($nombre != null) {
+                echo 'NOMBRE: ' . $nombre;
+            } ?></p>
+        <p><?php if ($documento_identidad != null) {
+                echo 'DOCUMENTO DE IDENTIDAD: ' . $documento_identidad;
+            } ?></p>
+        <p><?php if ($fecha_nacimiento != null) {
+                echo 'FECHA DE NACIMIENTO: ' . $fecha_nacimiento_formateada;
+            } ?></p>
+        <p><?php if ($estado_civil != null) {
+                echo 'ESTADO CIVIL: ' . $estado_civil;
+            } ?></p>
+        <p><?php if ($direccion != null) {
+                echo 'DIRECCIÓN: ' . $direccion;
+            } ?></p>
+        <p><?php if ($barrio != null) {
+                echo 'BARRIO: ' . $barrio;
+            } ?></p>
+        <p><?php if ($celular != null) {
+                echo 'CELULAR: ' . $celular;
+            } ?></p>
+        <p><?php if ($correo != null) {
+                echo 'CORREO: ' . $correo;
+            } ?></p>
     </div>
     <!-- Formacion Academica -->
     <div class="formacion_academica">
