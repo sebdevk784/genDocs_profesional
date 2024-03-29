@@ -13,7 +13,14 @@
 </header>
 
 <body>
-  <!--Scrip para el formulario -->
+  <!--Scrip para el formulario
+  la funcion agregar_referencias sirve para añadir mas divs en caso de que el usuario desee agregar mas referencias.
+  recibe el parametro idContenedor, es decir, el contenedor que se duplicará en caso de ser requerido
+
+  la funcion eliminar referencias sirve para eliminar un contenedor creado por la funcion anterior, manteniendo el 
+  contenedor original
+  recibe como parametro idContenedor, es decir, el contenedor que se deberá eliminar en caso de ser requerido
+-->
   <script>
     //crear campo de referencia
     function agregar_referencias(idContenedor) {
@@ -48,7 +55,7 @@
       <label>Documento de identidad:</label>
       <input type="text" name="documento_identidad" placeholder="ingresa solo el numero de documento">
       <label>Fecha de nacimiento:</label>
-      <input type="date" name="fecha">
+      <input type="date" name="fecha_nacimiento">
       <label>Estado civil:</label>
       <input type="text" name="estado_civil" placeholder="soltero/casado/viudo/etc">
       <label>Dirección:</label>
@@ -64,7 +71,7 @@
         <div id="grupo_formacion_academica" class="div_grupo_auxiliar">
           <label>FORMACION ACADEMICA.</label><br>
           <label>Nombre de la institución:</label>
-          <input type="text" name="institucion[]">
+          <input type="text" name="instituciones[]">
           <label>Titulo obtenido:</label>
           <input type="text" name="titulo_obtenido[]" placeholder="primaria/secundaria/otro">
           <label>Año:</label>
@@ -102,13 +109,13 @@
         <div id="grupo_referencia_familiar" class="div_grupo_auxiliar">
           <label>REFERENCIAS FAMILIARES.</label><br>
           <label>Nombre de la referencia:</label>
-          <input type="text" name="nombre_referencia[]">
+          <input type="text" name="nombre_referencia_familiar[]">
           <label>Parentesco de la referencia:</label>
-          <input type="text" name="parentesco_referencia[]" placeholder="mamá/papá/hermano/tío/etc.">
+          <input type="text" name="parentesco_referencia_familiar[]" placeholder="mamá/papá/hermano/tío/etc.">
           <label>Ocupacion de la referencia:</label>
-          <input type="text" name="ocupacion_referencia[]">
+          <input type="text" name="ocupacion_referencia_familiar[]">
           <label>Celular de la referencia:</label>
-          <input type="text" name="celular_referencia[]">
+          <input type="text" name="celular_referencia_familiar[]">
         </div>
       </div>
       <button type="button" onclick="agregar_referencias('referencias_familiares')">agregar referencia familiar</button>
