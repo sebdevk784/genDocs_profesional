@@ -24,25 +24,25 @@
   <script>
     //crear campo de referencia
     function agregar_referencias(idContenedor) {
-      var div_referencia_familiar = document.getElementById(idContenedor);
+      var contenedor = document.getElementById(idContenedor);
       //clonar los campos de referencia
-      var ultimos_inputs_referencia = div_referencia_familiar.lastElementChild;
-      var clon_referencia_familiar = ultimos_inputs_referencia.cloneNode(true);
+      var ultimos_inputs_contenedor = contenedor.lastElementChild;
+      var clon_contenedor = ultimos_inputs_contenedor.cloneNode(true);
       //limpiar valor de los inputs clonados
-      var inputs_referencia_familiar = clon_referencia_familiar.getElementsByTagName('input');
-      for (var i = 0; i < inputs_referencia_familiar.length; i++) {
-        inputs_referencia_familiar.value = '';
+      var inputs_contenedor = clon_contenedor.getElementsByTagName('input');
+      for (var i = 0; i < inputs_contenedor.length; i++) {
+        inputs_contenedor[i].value = '';
       }
 
       //añadir el clon
-      div_referencia_familiar.appendChild(clon_referencia_familiar);
+      contenedor.appendChild(clon_contenedor);
 
     }
     //funcion para eliminar divs
     function eliminar_referencias(idContenedor) {
-      var div_referencia_familiar = document.getElementById(idContenedor);
-      if (div_referencia_familiar.children.length > 1) {
-        div_referencia_familiar.removeChild(div_referencia_familiar.lastElementChild);
+      var contenedor = document.getElementById(idContenedor);
+      if (contenedor.children.length > 1) {
+        contenedor.removeChild(contenedor.lastElementChild);
       }
     }
   </script>

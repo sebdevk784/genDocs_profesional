@@ -92,7 +92,18 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
     </div>
     <!-- Formacion Academica -->
     <div class="formacion_academica">
-
+        <h3>FORMACION ACADEMICA</h3>
+        <?php
+        for ($i = 0; $i < count($instituciones); $i++) {
+            echo '<p>' . $instituciones[$i] . '</p>';
+            if ($titulo_obtenido[$i] != null) {
+                echo '<p> TITULO OBTENIDO: ' . $titulo_obtenido[$i] . '</p>';
+            }
+            if ($año_graduacion[$i] != null) {
+                echo '<p> AÑO: ' . $año_graduacion[$i] . '</p>';
+            }
+        }
+        ?>
     </div>
 
     <!-- experiencia laboral -->
