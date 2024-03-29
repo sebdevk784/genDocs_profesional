@@ -92,8 +92,16 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
     </div>
     <!-- Formacion Academica -->
     <div class="formacion_academica">
-        <h3>FORMACION ACADEMICA</h3>
+
         <?php
+        //validar que alguno de los campos este lleno para colocar titulo
+        if ((!empty($instituciones) && count(array_filter($instituciones)) > 0)
+            || (!empty($titulo_obtenido) && count(array_filter($titulo_obtenido)) > 0)
+            || (!empty($año_graduacion) && count(array_filter($año_graduacion)) > 0)
+        ) {
+            echo '<h3>FORMACION ACADEMICA</h3>';
+        }
+        //llenar los datos y validar que no sean nulos
         for ($i = 0; $i < count($instituciones); $i++) {
             echo '<p>' . $instituciones[$i] . '</p>';
             if ($titulo_obtenido[$i] != null) {
@@ -108,15 +116,88 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
 
     <!-- experiencia laboral -->
     <div class="experiencia_laboral">
+        <?php
+        //validar que alguno de los campos este lleno para poner el titulo
+        if ((!empty($nombre_empresa) && count(array_filter($nombre_empresa)) > 0)
+            || (!empty($cargo_ocupado) && count(array_filter($cargo_ocupado)) > 0)
+            || (!empty($nombre_jefe) && count(array_filter($nombre_jefe)) > 0)
+            || (!empty($telefono_empresa) && count(array_filter($telefono_empresa)) > 0)
+            || (!empty($numero_duracion_empresa) && count(array_filter($numero_duracion_empresa)) > 0)
+            || (!empty($unidad_duracion_empresa) && count(array_filter($unidad_duracion_empresa)) > 0)
+        ) {
+            echo '<h3>EXPERIENCIA LABORAL</h3>';
+        }
+        //llenar los datos y validando que no sean nulos
+        for ($i = 0; $i < count($nombre_empresa); $i++) {
+            if ($nombre_empresa[$i] != null) {
+                echo '<p> NOMBRE EMPRESA: ' . $nombre_empresa[$i] . '</p>';
+            }
+            if ($cargo_ocupado[$i] != null) {
+                echo '<p> CARGO: ' . $cargo_ocupado[$i] . '</p>';
+            }
+            if ($nombre_jefe[$i] != null) {
+                echo '<p> JEFE: ' . $nombre_jefe[$i] . '</p>';
+            }
+            if ($telefono_empresa[$i] != null) {
+                echo '<p> TELEFONO: ' . $telefono_empresa[$i] . '</p>';
+            }
+            if (($numero_duracion_empresa[$i] != null) && ($unidad_duracion_empresa[$i] != null)) {
+                echo '<p> DURACION: ' . $numero_duracion_empresa[$i] . ' ' . $unidad_duracion_empresa[$i] . '</p>';
+            }
+        }
+        ?>
 
     </div>
     <!-- referencias familiares -->
     <div class="referencias_familiares">
-
+        <?php
+        //validar que alguno de los camos este lleno para poner el titulo
+        if ((!empty($nombre_referencia_familiar) && count(array_filter($nombre_referencia_familiar)) > 0)
+            || (!empty($parentesco_referencia_familiar) && count(array_filter($parentesco_referencia_familiar)) > 0)
+            || (!empty($ocupacion_refrencia_familiar) && count(array_filter($ocupacion_refrencia_familiar)) > 0)
+            || (!empty($celular_referencia_familiar) && count(array_filter($celular_referencia_familiar)) > 0)
+        ) {
+            echo '<h3>REFERENCIAS FAMILIARES</h3>';
+        }
+        //llenar los datos y validar que no sean nulos
+        for ($i = 0; $i < count($nombre_referencia_familiar); $i++) {
+            if ($nombre_referencia_familiar[$i] != null) {
+                echo '<p> NOMBRE: ' . $nombre_referencia_familiar[$i] . '</p>';
+            }
+            if ($parentesco_referencia_familiar[$i] != null) {
+                echo '<p> PARENTESCO: ' . $parentesco_referencia_familiar[$i] . '</p>';
+            }
+            if ($ocupacion_refrencia_familiar[$i] != null) {
+                echo '<p> OCUPACION: ' . $ocupacion_refrencia_familiar[$i] . '</p>';
+            }
+            if ($celular_referencia_familiar[$i] != null) {
+                echo '<p> CELULAR: ' . $celular_referencia_familiar[$i] . '</p>';
+            }
+        }
+        ?>
     </div>
     <!-- referencias personales -->
     <div class="referencias_personales">
-
+        <?php
+        if ((!empty($nombre_referencia_personal) && count(array_filter($nombre_referencia_personal)) > 0)
+            || (!empty($ocupacion_referencia_personal) && count(array_filter($ocupacion_referencia_personal)) > 0)
+            || (!empty($celular_referencia_personal) && count(array_filter($celular_referencia_personal)) > 0)
+        ) {
+            echo '<h3>REFERENCIAS PERSONAL</h3>';
+        }
+        //llenar los datos y validar que no sean nulos
+        for ($i = 0; $i < count($nombre_referencia_personal); $i++) {
+            if ($nombre_referencia_personal[$i] != null) {
+                echo '<p> NOMBRE: ' . $nombre_referencia_personal[$i] . '</p>';
+            }
+            if ($ocupacion_referencia_personal[$i] != null) {
+                echo '<p> OCUPACION: ' . $ocupacion_referencia_personal[$i] . '</p>';
+            }
+            if ($celular_referencia_personal[$i] != null) {
+                echo '<p> CELULAR: ' . $celular_referencia_personal[$i] . '</p>';
+            }
+        }
+        ?>
     </div>
 
 
