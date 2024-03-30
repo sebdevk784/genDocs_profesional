@@ -47,11 +47,13 @@
     }
   </script>
   <div class="formulario">
-    <form action="hoja_vida_template.php" method="POST">
+    <form action="hoja_vida_template.php" method="POST" enctype="multipart/form-data">
       <!--seccion datos personales -->
       <label>DATOS PERSONALES.</label><br>
       <label>Nombre:</label>
       <input type="text" name="nombre" placeholder="ingresa nombre completo">
+      <label>Foto:</label>
+      <input type="file" name="foto">
       <label>Documento de identidad:</label>
       <input type="text" name="documento_identidad" placeholder="ingresa solo el numero de documento">
       <label>Fecha de nacimiento:</label>

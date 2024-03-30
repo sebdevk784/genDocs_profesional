@@ -39,10 +39,11 @@ $date_nacimiento = new DateTime($fecha_nacimiento);
 $mes_redaccion_español = $meses[$date_nacimiento->format('n') - 1];
 //termino de formatear el dia y el año.
 $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_redaccion_español . ' de ' . $date_nacimiento->format('Y');
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -52,9 +53,32 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
 </head>
 
 <body>
-    <!-- informacion del perfil profesional -->
+    <!-- información del perfil profesional -->
     <div class="perfil_profesional">
+        <!-- NOMBRE TITULO -->
         <h1><?php echo $nombre ?></h1>
+        <?php
+        //IMAGEN 3*4
+        //procesar imagen
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+                // Obtener información sobre la imagen
+                $nombreArchivo = $_FILES['foto']['name'];
+                $tipoArchivo = $_FILES['foto']['type'];
+                $rutaTemporal = $_FILES['foto']['tmp_name'];
+
+                // Verifica si es una imagen válida 
+                if (strpos($tipoArchivo, 'image') !== false) {
+                    // Muestra la imagen en la página
+                    echo "<img class='foto' src=\"data:$tipoArchivo;base64," . base64_encode(file_get_contents($rutaTemporal)) . "\">";
+                } else {
+                    echo "El archivo no es una imagen válida.";
+                }
+            } else {
+                echo "Error al subir la imagen.";
+            }
+        }
+        ?>
         <h4>PERFIL PROFESIONAL</h4>
         <p>Soy una persona comprometida con la excelencia y la eficiencia en mi trabajo. Me considero proactivo/a
             y tengo una gran capacidad de aprendizaje. Mi enfoque se centra en resolver problemas de manera ágil y
