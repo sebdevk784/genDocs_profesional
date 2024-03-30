@@ -75,7 +75,7 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
                     echo "El archivo no es una imagen válida.";
                 }
             } else {
-                echo "Error al subir la imagen.";
+                echo "<div class='no_foto'> </div>";
             }
         }
         ?>
@@ -147,7 +147,6 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
             || (!empty($nombre_jefe) && count(array_filter($nombre_jefe)) > 0)
             || (!empty($telefono_empresa) && count(array_filter($telefono_empresa)) > 0)
             || (!empty($numero_duracion_empresa) && count(array_filter($numero_duracion_empresa)) > 0)
-            || (!empty($unidad_duracion_empresa) && count(array_filter($unidad_duracion_empresa)) > 0)
         ) {
             echo '<h3>EXPERIENCIA LABORAL</h3>';
         }

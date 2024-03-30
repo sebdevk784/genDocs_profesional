@@ -47,7 +47,7 @@
     }
   </script>
   <div class="formulario">
-    <form action="hoja_vida_template.php" method="POST" enctype="multipart/form-data">
+    <form action="crear_cv_pdf.php" method="POST" enctype="multipart/form-data">
       <!--seccion datos personales -->
       <label>DATOS PERSONALES.</label><br>
       <label>Nombre:</label>

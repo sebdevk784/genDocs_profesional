@@ -5,7 +5,7 @@ use Dompdf\Dompdf;
 //iniciar buffering de salida
 ob_start();
 //incluir template
-require 'carta_renuncia_template.php';
+require 'hoja_vida_template.php';
 //guardar contenido del buffer en variable
 $html = ob_get_clean();
 // Obtén la ruta actual del archivo
@@ -17,4 +17,4 @@ $dompdf->setPaper('letter');
 $dompdf->loadHtml($html);
 $dompdf->render();
 //se genera el pdf
-$dompdf->stream("carta_renuncia.pdf", array("Attachment" => true));
+$dompdf->stream("hoja_de_vida.pdf", array("Attachment" => true));

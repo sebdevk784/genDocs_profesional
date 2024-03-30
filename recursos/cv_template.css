@@ -3,3 +3,9 @@
     height: 4cm;
     object-fit: contain;
 }
+.no_foto{
+    
+    width: 3cm;
+    height: 4cm;
+    border: 2px black solid;
+}
