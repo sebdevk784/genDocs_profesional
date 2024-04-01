@@ -33,7 +33,14 @@
             </select>
             <label>Nombre de quien recomienda</label>
             <input type="text" name="nombre_recomendador" placeholder="ingresa el nombre de quien recomienda">
-            <label>Numero de cedula de quien recomienda</label>
+            <label>Numero de cédula del recomendador</label>
+            <select name="tipo_documento">
+                <option value="CC">Cédula de ciudadanía</option>
+                <option value="PPT">Permiso por protección temporal</option>
+                <option value="PEP">Permiso especial de permanencia</option>
+                <option value="CE">Cédula de extrangería</option>
+            </select>
+            <label>Número de cédula de quien recomienda</label>
             <input type="text" name="cedula_recomendador" placeholder="ingresa la cedula de quien recomienda">
             <label>Telefono de quien recomienda</label>
             <input type="text" name="telefono_recomendador" placeholder="ingresa el telefono de quien recomienda">

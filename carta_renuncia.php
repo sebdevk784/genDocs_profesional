@@ -34,7 +34,7 @@
                 <option value="PEP">Permiso especial de permanencia</option>
                 <option value="CE">Cédula de extrangería</option>
             </select>
-            <label>Numero de cedula de quien renuncia</label>
+            <label>Numero de cédula de quien renuncia</label>
             <input type="text" name="cedula_renunciante" placeholder="ingresa la cedula de quien renuncia">
             <label>Telefono de quien renuncia</label>
             <input type="text" name="telefono_renunciante" placeholder="ingresa el telefono de quien renuncia">

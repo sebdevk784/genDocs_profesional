@@ -7,6 +7,7 @@ $documento_recomendado = $_POST['documento_recomendado'];
 $tiempo_conocidos = $_POST['tiempo_conocidos'];
 $unidad_tiempo_conocidos = $_POST['unidad_tiempo_conocidos'];
 $nombre_recomendador = $_POST['nombre_recomendador'];
+$tipo_documento = $_POST['tipo_documento'];
 $cedula_recomendador = $_POST['cedula_recomendador'];
 $telefono_recomendador = $_POST['telefono_recomendador'];
 //array para formatear la fecha
@@ -55,7 +56,7 @@ $fecha_redaccion_formateada = $date_redaccion->format('d') . ' de ' . $mes_redac
         <p class="firma">________________________________</p>
         <?php
         echo    "<p class='firma'>" . $nombre_recomendador . "</p>";
-        echo  "<p class='firma'>" . "DNI N° " . $cedula_recomendador . "</p>";
+        echo  "<p class='firma'>" . $tipo_documento . ": " . $cedula_recomendador . "</p>";
         echo   "<p class='firma'>" . "TEL: " . $telefono_recomendador . "</p>";
         ?>
     </div>
