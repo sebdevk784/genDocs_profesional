@@ -7,6 +7,7 @@ $nombre_empresa = $_POST['nombre_empresa'];
 $nombre_jefe = $_POST['nombre_jefe'];
 $nombre_renunciante = $_POST['nombre_renunciante'];
 $fecha_renuncia = $_POST['fecha_renuncia'];
+$tipo_documento = $_POST['tipo_documento'];
 $cedula_renunciante = $_POST['cedula_renunciante'];
 $telefono_renunciante = $_POST['telefono_renunciante'];
 //array de meses para formatear la fecha
@@ -70,8 +71,8 @@ $fecha_renuncia_formateada = $date_renuncia->format('d') . ' de ' . $mes_renunci
         <p class="firma">________________________________</p>
         <?php
         echo    "<p class='firma'>" . $nombre_renunciante . "</p>";
-        echo   "<p class='firma'>" . "DNI N° " . $cedula_renunciante . "</p>";
-        echo  "<p class='firma'>" . "TEL: " . $telefono_renunciante . "</p>";
+        echo   "<p class='firma'>" . $tipo_documento . ": " . $cedula_renunciante . "</p>";
+        echo  "<p class='firma'>" . "CEL: " . $telefono_renunciante . "</p>";
         ?>
     </div>
 </body>

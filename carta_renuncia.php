@@ -27,6 +27,13 @@
             <input type="text" name="nombre_renunciante" placeholder="ingresa el nombre de quien renuncia">
             <label>Fecha de renuncia:</label>
             <input type="date" name="fecha_renuncia">
+            <label>Tipo de documento</label>
+            <select name="tipo_documento">
+                <option value="CC">Cédula de ciudadanía</option>
+                <option value="PPT">Permiso por protección temporal</option>
+                <option value="PEP">Permiso especial de permanencia</option>
+                <option value="CE">Cédula de extrangería</option>
+            </select>
             <label>Numero de cedula de quien renuncia</label>
             <input type="text" name="cedula_renunciante" placeholder="ingresa la cedula de quien renuncia">
             <label>Telefono de quien renuncia</label>
