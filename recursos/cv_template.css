@@ -1,11 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 12px;
+    border-style: double;
+    border-color: #000 blue;
+}
+.contenido{
+    margin: 2cm 2.5cm 2cm 2.5cm ;
+    
+}
+header{
+    margin-top: -1cm;
+   text-align: center;
+   background-color: aquamarine;
+}
+
+
+.perfil_profesional{
+    text-align: center;
+
+ }
+ .perfil_profesional p {
+    text-align: justify;
+ }
+
 .foto{
     width: 3cm;
     height: 4cm;
     object-fit: contain;
 }
 .no_foto{
-    
     width: 3cm;
     height: 4cm;
     border: 2px black solid;
 }
+
