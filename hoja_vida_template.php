@@ -93,28 +93,28 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
         <div class="datos_personales">
             <h3>DATOS PERSONALES</h3>
             <p><?php if ($nombre != null) {
-                    echo 'NOMBRE: ' . $nombre;
+                    echo '<b>NOMBRE: </b> ' . $nombre;
                 } ?></p>
             <p><?php if ($documento_identidad != null) {
-                    echo 'DOCUMENTO DE IDENTIDAD: ' . $documento_identidad;
+                    echo '<b>DOCUMENTO DE IDENTIDAD: </b> ' . $documento_identidad;
                 } ?></p>
             <p><?php if ($fecha_nacimiento != null) {
-                    echo 'FECHA DE NACIMIENTO: ' . $fecha_nacimiento_formateada;
+                    echo '<b>FECHA DE NACIMIENTO: </b>' . $fecha_nacimiento_formateada;
                 } ?></p>
             <p><?php if ($estado_civil != null) {
-                    echo 'ESTADO CIVIL: ' . $estado_civil;
+                    echo '<b> ESTADO CIVIL: </b>' . $estado_civil;
                 } ?></p>
             <p><?php if ($direccion != null) {
-                    echo 'DIRECCIÓN: ' . $direccion;
+                    echo '<b> DIRECCIÓN: </b>' . $direccion;
                 } ?></p>
             <p><?php if ($barrio != null) {
-                    echo 'BARRIO: ' . $barrio;
+                    echo '<b>BARRIO: </b>' . $barrio;
                 } ?></p>
             <p><?php if ($celular != null) {
-                    echo 'CELULAR: ' . $celular;
+                    echo '<b>CELULAR: </b>' . $celular;
                 } ?></p>
             <p><?php if ($correo != null) {
-                    echo 'CORREO: ' . $correo;
+                    echo '<b>CORREO: </b>' . $correo;
                 } ?></p>
         </div>
         <!-- Formacion Academica -->
@@ -130,12 +130,12 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
             }
             //llenar los datos y validar que no sean nulos
             for ($i = 0; $i < count($instituciones); $i++) {
-                echo '<p>' . $instituciones[$i] . '</p>';
+                echo '<p class="instituciones" > <b>' . $instituciones[$i] . '</b></p>';
                 if ($titulo_obtenido[$i] != null) {
-                    echo '<p> TITULO OBTENIDO: ' . $titulo_obtenido[$i] . '</p>';
+                    echo '<p> <b>TITULO OBTENIDO: </b>' . $titulo_obtenido[$i] . '</p>';
                 }
                 if ($año_graduacion[$i] != null) {
-                    echo '<p> AÑO: ' . $año_graduacion[$i] . '</p>';
+                    echo '<p><b> AÑO: </b>' . $año_graduacion[$i] . '</p>';
                 }
             }
             ?>
@@ -156,19 +156,19 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
             //llenar los datos y validando que no sean nulos
             for ($i = 0; $i < count($nombre_empresa); $i++) {
                 if ($nombre_empresa[$i] != null) {
-                    echo '<p> NOMBRE EMPRESA: ' . $nombre_empresa[$i] . '</p>';
+                    echo '<p> <b>NOMBRE EMPRESA: </b>' . $nombre_empresa[$i] . '</p>';
                 }
                 if ($cargo_ocupado[$i] != null) {
-                    echo '<p> CARGO: ' . $cargo_ocupado[$i] . '</p>';
+                    echo '<p><b> CARGO:</b> ' . $cargo_ocupado[$i] . '</p>';
                 }
                 if ($nombre_jefe[$i] != null) {
-                    echo '<p> JEFE: ' . $nombre_jefe[$i] . '</p>';
+                    echo '<p> <b> JEFE: </b>' . $nombre_jefe[$i] . '</p>';
                 }
                 if ($telefono_empresa[$i] != null) {
-                    echo '<p> TELEFONO: ' . $telefono_empresa[$i] . '</p>';
+                    echo '<p> <b>TELEFONO: </b>' . $telefono_empresa[$i] . '</p>';
                 }
                 if (($numero_duracion_empresa[$i] != null) && ($unidad_duracion_empresa[$i] != null)) {
-                    echo '<p> DURACION: ' . $numero_duracion_empresa[$i] . ' ' . $unidad_duracion_empresa[$i] . '</p>';
+                    echo '<p> <b>DURACION: </b>' . $numero_duracion_empresa[$i] . ' ' . $unidad_duracion_empresa[$i] . '</p>';
                 }
             }
             ?>
@@ -188,16 +188,16 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
             //llenar los datos y validar que no sean nulos
             for ($i = 0; $i < count($nombre_referencia_familiar); $i++) {
                 if ($nombre_referencia_familiar[$i] != null) {
-                    echo '<p> NOMBRE: ' . $nombre_referencia_familiar[$i] . '</p>';
+                    echo '<p> <b>NOMBRE: </b>' . $nombre_referencia_familiar[$i] . '</p>';
                 }
                 if ($parentesco_referencia_familiar[$i] != null) {
-                    echo '<p> PARENTESCO: ' . $parentesco_referencia_familiar[$i] . '</p>';
+                    echo '<p> <b>PARENTESCO: </b>' . $parentesco_referencia_familiar[$i] . '</p>';
                 }
                 if ($ocupacion_refrencia_familiar[$i] != null) {
-                    echo '<p> OCUPACION: ' . $ocupacion_refrencia_familiar[$i] . '</p>';
+                    echo '<p> <b>OCUPACION: </b>' . $ocupacion_refrencia_familiar[$i] . '</p>';
                 }
                 if ($celular_referencia_familiar[$i] != null) {
-                    echo '<p> CELULAR: ' . $celular_referencia_familiar[$i] . '</p>';
+                    echo '<p> <b>CELULAR: </b>' . $celular_referencia_familiar[$i] . '</p>';
                 }
             }
             ?>
@@ -209,18 +209,18 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
                 || (!empty($ocupacion_referencia_personal) && count(array_filter($ocupacion_referencia_personal)) > 0)
                 || (!empty($celular_referencia_personal) && count(array_filter($celular_referencia_personal)) > 0)
             ) {
-                echo '<h3>REFERENCIAS PERSONAL</h3>';
+                echo '<h3>REFERENCIAS PERSONALES</h3>';
             }
             //llenar los datos y validar que no sean nulos
             for ($i = 0; $i < count($nombre_referencia_personal); $i++) {
                 if ($nombre_referencia_personal[$i] != null) {
-                    echo '<p> NOMBRE: ' . $nombre_referencia_personal[$i] . '</p>';
+                    echo '<p> <b>NOMBRE: </b>' . $nombre_referencia_personal[$i] . '</p>';
                 }
                 if ($ocupacion_referencia_personal[$i] != null) {
-                    echo '<p> OCUPACION: ' . $ocupacion_referencia_personal[$i] . '</p>';
+                    echo '<p> <b>OCUPACION: </b>' . $ocupacion_referencia_personal[$i] . '</p>';
                 }
                 if ($celular_referencia_personal[$i] != null) {
-                    echo '<p> CELULAR: ' . $celular_referencia_personal[$i] . '</p>';
+                    echo '<p><b> CELULAR: </b>' . $celular_referencia_personal[$i] . '</p>';
                 }
             }
             ?>
