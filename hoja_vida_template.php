@@ -82,7 +82,7 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
                 }
             }
             ?>
-            <h4>PERFIL PROFESIONAL</h4>
+            <h3>PERFIL PROFESIONAL</h3>
             <p>Soy una persona comprometida con la excelencia y la eficiencia en mi trabajo. Me considero proactivo/a
                 y tengo una gran capacidad de aprendizaje. Mi enfoque se centra en resolver problemas de manera ágil y
                 consistente, además de colaborar efectivamente en equipo. Mi objetivo es contribuir al éxito de la

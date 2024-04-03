@@ -4,14 +4,25 @@ body{
     border: 12px;
     border-style: inset;
     border-color: #000 ;
+    padding-top: 80px;
+    
 }
 .contenido{
-    margin: 2cm 2.5cm 2cm 2.5cm ;
+    margin: -1.5cm 2.5cm 2cm 2.5cm ;
     
 }
 header{
-    margin-top: -1cm;
    text-align: center;
+}
+
+h3{
+    font-size: 20px;
+    text-align: center;
+    background-color: #bdbdbd;
+    width: 65%;
+    padding: 10px;
+    margin: 20px auto;
+    border: 3px #000 outset;
 }
 
 .instituciones{
