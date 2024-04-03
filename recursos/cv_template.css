@@ -13,6 +13,8 @@ body{
 }
 header{
    text-align: center;
+   text-transform: uppercase;
+   font-size: 11px;
 }
 
 h3{
@@ -23,6 +25,21 @@ h3{
     padding: 10px;
     margin: 20px auto;
     border: 3px #000 outset;
+}
+.datos_personales p{
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+}
+
+.informacion_grupo p{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
+}
+.informacion_grupo{
+    margin-bottom: 30px;
 }
 
 .instituciones{
