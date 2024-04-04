@@ -14,7 +14,9 @@
 
 <body>
     <div class="formulario">
+
         <form method="POST" action="crear_carta_renuncia_pdf.php">
+            <h1>FORMULARIO CARTA DE RENUNCIA</h1>
             <label>Ciudad y Departamento:</label>
             <input type="text" name="ciudad" placeholder="ingresa la ciudad de redacción">
             <label>Fecha de redacción:</label>

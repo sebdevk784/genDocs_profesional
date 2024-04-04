@@ -48,8 +48,9 @@
   </script>
   <div class="formulario">
     <form action="crear_cv_pdf.php" method="POST" enctype="multipart/form-data">
+      <h1>FORMULARIO HOJA DE VIDA</h1>
       <!--seccion datos personales -->
-      <label>DATOS PERSONALES.</label><br>
+      <h2>DATOS PERSONALES.</h2><br>
       <label>Nombre:</label>
       <input type="text" name="nombre" placeholder="ingresa nombre completo">
       <label>Foto:</label>
@@ -70,8 +71,9 @@
       <input type="text" name="correo" placeholder="ingresa el correo personal">
       <!--seccion formacion academica -->
       <div id="formacion_academica">
+        <h2>FORMACION ACADEMICA.</h2><br>
         <div id="grupo_formacion_academica" class="div_grupo_auxiliar">
-          <label>FORMACION ACADEMICA.</label><br>
+
           <label>Nombre de la institución:</label>
           <input type="text" name="instituciones[]">
           <label>Titulo obtenido:</label>
@@ -84,8 +86,9 @@
       <button type="button" onclick="eliminar_referencias('formacion_academica')">eliminar formación acádemica</button>
       <!--seccion experiencia laboral -->
       <div id="experiencia_laboral">
+        <h2>EXPERIENCIA LABORAL.</h2>
         <div id="grupo_experiencia_laboral" class="div_grupo_auxiliar">
-          <label>EXPERIENCIA LABORAL.</label><br>
+
           <label>Nombre de la empresa:</label>
           <input type="text" name="nombre_empresa[]">
           <label>Cargo ocupado:</label>
@@ -98,7 +101,7 @@
           <input type="text" name="numero_duracion_empresa[]">
           <select name="unidad_duracion_empresa[]">
             <option value="año">Año</option>
-            <option value="años">Años</option>
+            <option value="años" selected>Años</option>
             <option value="mes">Mes</option>
             <option value="meses">Meses</option>
           </select>
@@ -108,8 +111,8 @@
       <button type="button" onclick="eliminar_referencias('experiencia_laboral')">eliminar experiencia</button>
       <!--seccion referencias familiares -->
       <div id="referencias_familiares">
+        <h2>REFERENCIAS FAMILIARES.</h2>
         <div id="grupo_referencia_familiar" class="div_grupo_auxiliar">
-          <label>REFERENCIAS FAMILIARES.</label><br>
           <label>Nombre de la referencia:</label>
           <input type="text" name="nombre_referencia_familiar[]">
           <label>Parentesco de la referencia:</label>
@@ -124,8 +127,9 @@
       <button type="button" onclick="eliminar_referencias('referencias_familiares')">eliminar referencia familiar</button>
       <!--seccion referencias personales -->
       <div id="referencias_personales">
+        <h2>REFERENCIAS PERSONALES.</h2>
         <div id="grupo_referencia_personal" class="div_grupo_auxiliar">
-          <label>REFERENCIAS PERSONAL.</label><br>
+
           <label>Nombre de la referencia:</label>
           <input type="text" name="nombre_referencia_personal[]">
           <label>Ocupacion de la referencia:</label>

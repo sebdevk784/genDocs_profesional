@@ -14,6 +14,7 @@
 <body>
     <div class="formulario">
         <form method="POST" action="crear_carta_recomendacion_pdf.php">
+            <h1>FORMULARIO CARTA DE RENUNCIA</h1>
             <label>Ciudad y Departamento:</label>
             <input type="text" name="ciudad" placeholder="ingresa la ciudad de redacción">
             <label>Fecha de redacción:</label>
@@ -27,7 +28,7 @@
             <label>meses/años de conocerse</label>
             <select name="unidad_tiempo_conocidos">
                 <option value="año">Año</option>
-                <option value="años">Años</option>
+                <option value="años" selected>Años</option>
                 <option value="mes">Mes</option>
                 <option value="meses">Meses</option>
             </select>
