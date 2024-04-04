@@ -57,7 +57,7 @@ $fecha_nacimiento_formateada = $date_nacimiento->format('d') . ' de ' . $mes_red
         <!-- información del perfil profesional -->
         <header>
             <!-- NOMBRE TITULO -->
-            <h1><?php echo $nombre ?></h1>
+            <h1>HOJA DE VIDA</h1>
         </header>
         <div class="perfil_profesional">
             <?php

@@ -5,5 +5,6 @@
         <li><a href="./index.php">hoja de vida</a></li>
         <li><a href="./carta_renuncia.php">carta de renuncia</a></li>
         <li><a href="./carta_recomendacion_personal.php">carta de recomendacion personal</a></li>
+        <li><a href="#">Inicio</a></li>
     </ul>
 </nav>
