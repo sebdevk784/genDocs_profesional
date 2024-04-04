@@ -2,8 +2,11 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8" />
     <title>carta recomendacion personal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./recursos/estilos.css">
 </head>
 <header>
     <?php
@@ -14,7 +17,7 @@
 <body>
     <div class="formulario">
         <form method="POST" action="crear_carta_recomendacion_pdf.php">
-            <h1>FORMULARIO CARTA DE RENUNCIA</h1>
+            <h1>FORMULARIO CARTA DE RECOMENDACIÓN PERSONAL</h1>
             <label>Ciudad y Departamento:</label>
             <input type="text" name="ciudad" placeholder="ingresa la ciudad de redacción">
             <label>Fecha de redacción:</label>

@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     font-family:'Times New Roman', Times, serif;
-    font-size: larger;
     background-color: #eeeeee;
 }
 .formulario h1{
@@ -39,7 +38,6 @@ input, select, .div_grupo_auxiliar input, .div_grupo_auxiliar select{
 
 input:focus{
     background-color: #eeeeee;
-    
 }
 
 button{
@@ -56,3 +54,20 @@ button:hover{
     color: black;
 }
 /*insertar media query de max-width 800px, hacer que el formulario ocupe el 100% de la página*/
+
+@media (max-width: 800px) {
+    /* Reglas CSS para pantallas más pequeñas que 800px */
+    .formulario {
+    margin: 0;
+    width: 100%;
+    font-size: 4vw;
+    }
+    .formulario h1{
+        font-size: 5vw;
+    }
+    input, select, .div_grupo_auxiliar input, .div_grupo_auxiliar select{
+        width: 80%;
+        height: 50px;
+        
+    }
+  }

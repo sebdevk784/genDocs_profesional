@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./recursos/estilos.css" type="text/css">
 <link rel="stylesheet" href="./recursos/navbar.css" type="text/css">
 <nav class="navbar">
     <ul>

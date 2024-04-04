@@ -51,6 +51,7 @@ a deformar mucho el estilo del navbar.*/
 @media(max-width:700px){
     .navbar{       
         height: 175px;
+      
     }
     ul{
         line-height: 2;   
