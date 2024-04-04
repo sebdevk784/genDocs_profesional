@@ -1,6 +1,7 @@
 
 .navbar{
     height: 2vw;
+    width: 100%;
     background-color: #000;
     margin-bottom: 50px;
    padding: 2vw 1vh;
@@ -33,7 +34,7 @@ a:hover{
     color: #424242;
 }
 /*se parte desde la media query 1200px ya que con los estilos anteriores se empezba
-a deformar mucho el estilodel navbar, de momento no veo necesario otro brakpoint para la barra de navegacion */
+a deformar mucho el estilo del navbar.*/
 @media(max-width:1200px){
     .navbar{
         height: 17vw;
@@ -47,3 +48,11 @@ a deformar mucho el estilodel navbar, de momento no veo necesario otro brakpoint
     }
 }
 
+@media(max-width:700px){
+    .navbar{       
+        height: 175px;
+    }
+    ul{
+        line-height: 2;   
+    }
+}
