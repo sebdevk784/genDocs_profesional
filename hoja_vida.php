@@ -5,6 +5,7 @@
 
   <meta charset="UTF-8" />
   <title>hoja de vida</title>
+  <link rel="icon" type="image/png" href="./recursos/img/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./recursos/estilos.css">
 </head>
@@ -54,34 +55,34 @@
       <!--seccion datos personales -->
       <h2>DATOS PERSONALES.</h2><br>
       <label>Nombre:</label>
-      <input type="text" name="nombre" placeholder="ingresa nombre completo">
+      <input type="text" name="nombre" placeholder="Sebastián González Echavarría">
       <label>Foto:</label>
       <input type="file" name="foto">
       <label>Documento de identidad:</label>
-      <input type="number" name="documento_identidad" placeholder="ingresa solo el numero de documento">
+      <input type="number" name="documento_identidad" placeholder="9999999999">
       <label>Fecha de nacimiento:</label>
       <input type="date" name="fecha_nacimiento">
       <label>Estado civil:</label>
       <input type="text" name="estado_civil" placeholder="soltero/casado/viudo/etc">
       <label>Dirección:</label>
-      <input type="text" name="direccion" placeholder="solo direccion y numero">
+      <input type="text" name="direccion" placeholder="cra 99 #99-99">
       <label>Barrio:</label>
-      <input type="text" name="barrio" placeholder="solo el nombre del barrio">
+      <input type="text" name="barrio" placeholder="barrio">
       <label>Celular:</label>
-      <input type="number" name="celular">
+      <input type="number" name="celular" placeholder=" 3333333333">
       <label>Correo:</label>
-      <input type="email" name="correo" placeholder="ingresa el correo personal">
+      <input type="email" name="correo" placeholder="ejemplo@ejemplo.com">
       <!--seccion formacion academica -->
       <div id="formacion_academica">
         <h2>FORMACION ACADEMICA.</h2><br>
         <div id="grupo_formacion_academica" class="div_grupo_auxiliar">
 
           <label>Nombre de la institución:</label>
-          <input type="text" name="instituciones[]">
+          <input type="text" name="instituciones[]" placeholder="Institución Educativa">
           <label>Titulo obtenido:</label>
-          <input type="text" name="titulo_obtenido[]" placeholder="primaria/secundaria/otro">
+          <input type="text" name="titulo_obtenido[]" placeholder="primaria/secundaria/pregrado">
           <label>Año:</label>
-          <input type="number" name="año_graduacion[]" placeholder="ingresa el año de graduación">
+          <input type="number" name="año_graduacion[]" placeholder="2022">
         </div>
       </div>
       <button type="button" onclick="agregar_referencias('formacion_academica')">agregar formación acádemica</button>
@@ -92,15 +93,15 @@
         <div id="grupo_experiencia_laboral" class="div_grupo_auxiliar">
 
           <label>Nombre de la empresa:</label>
-          <input type="text" name="nombre_empresa[]">
+          <input type="text" name="nombre_empresa[]" placeholder="Empresa">
           <label>Cargo ocupado:</label>
-          <input type="text" name="cargo_ocupado[]">
+          <input type="text" name="cargo_ocupado[]" placeholder="Oficios Varios">
           <label>Nombre del jefe:</label>
-          <input type="text" name="nombre_jefe[]">
+          <input type="text" name="nombre_jefe[]" placeholder="Raúl Gómez Gómez">
           <label>Telefono:</label>
-          <input type="number" name="telefono_empresa[]" placeholder="numero del telefono de la empresa">
+          <input type="number" name="telefono_empresa[]" placeholder="3333333333">
           <label>Duración en la empresa:</label>
-          <input type="number" name="numero_duracion_empresa[]">
+          <input type="number" name="numero_duracion_empresa[]" placeholder="2">
           <select name="unidad_duracion_empresa[]">
             <option value="año">Año</option>
             <option value="años" selected>Años</option>
@@ -116,13 +117,13 @@
         <h2>REFERENCIAS FAMILIARES.</h2>
         <div id="grupo_referencia_familiar" class="div_grupo_auxiliar">
           <label>Nombre de la referencia:</label>
-          <input type="text" name="nombre_referencia_familiar[]">
+          <input type="text" name="nombre_referencia_familiar[]" placeholder="María Gómez">
           <label>Parentesco de la referencia:</label>
-          <input type="text" name="parentesco_referencia_familiar[]" placeholder="mamá/papá/hermano/tío/etc.">
+          <input type="text" name="parentesco_referencia_familiar[]" placeholder="mamá/papá/hermano/prima/etc.">
           <label>Ocupacion de la referencia:</label>
-          <input type="text" name="ocupacion_referencia_familiar[]">
+          <input type="text" name="ocupacion_referencia_familiar[]" placeholder="Administradora">
           <label>Celular de la referencia:</label>
-          <input type="number" name="celular_referencia_familiar[]">
+          <input type="number" name="celular_referencia_familiar[]" placeholder="3333333333">
         </div>
       </div>
       <button type="button" onclick="agregar_referencias('referencias_familiares')">agregar referencia familiar</button>
@@ -133,11 +134,11 @@
         <div id="grupo_referencia_personal" class="div_grupo_auxiliar">
 
           <label>Nombre de la referencia:</label>
-          <input type="text" name="nombre_referencia_personal[]">
+          <input type="text" name="nombre_referencia_personal[]" placeholder="Raúl Gómez Gómez">
           <label>Ocupacion de la referencia:</label>
-          <input type="text" name="ocupacion_referencia_personal[]">
+          <input type="text" name="ocupacion_referencia_personal[]" placeholder="Ingeniero">
           <label>Celular de la referencia:</label>
-          <input type="number" name="celular_referencia_personal[]">
+          <input type="number" name="celular_referencia_personal[]" placeholder="3333333333">
         </div>
       </div>
       <button type="button" onclick="agregar_referencias('referencias_personales')">agregar referencia personal</button>
