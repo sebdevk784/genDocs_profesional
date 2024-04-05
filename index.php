@@ -53,5 +53,10 @@
         </div>
     </div>
 </body>
+<footer>
+    <?php
+    include './footer_template.php';
+    ?>
+</footer>
 
 </html>

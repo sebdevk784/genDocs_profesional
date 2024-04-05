@@ -1,0 +1,38 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+.footer p{
+    color: #eee;
+}
+.footer img{
+    width: 3vw;
+}
+.github{
+    background-color: #fff;
+}
+
+.footer_social ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer_social p{
+    text-align: center;
+}
+
+.footer_social li{
+    margin: auto 3.5vw;
+}
+.licencia{
+    text-align: center;
+}
+
+.logo img{
+    width: 10vw;
+    margin-left: 3vw;
+}
