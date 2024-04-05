@@ -36,3 +36,24 @@
     width: 10vw;
     margin-left: 3vw;
 }
+
+@media(max-width:1200px){
+    .footer{
+        font-size: 5vw;
+        flex-direction: column;
+    }
+    .logo img{
+        margin-top: 40px;
+        width: 50vw;
+    }
+    .licencia{
+        font-size: 3.5vw;
+    }
+    .footer_social ul{
+        padding: 0;
+    }
+    .footer_social img{
+        width: 20vw;
+    }
+
+}
