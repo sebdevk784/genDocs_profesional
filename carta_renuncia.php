@@ -39,9 +39,9 @@
                 <option value="CE">Cédula de extrangería</option>
             </select>
             <label>Numero de cédula de quien renuncia</label>
-            <input type="text" name="cedula_renunciante" placeholder="ingresa la cedula de quien renuncia">
+            <input type="number" name="cedula_renunciante" placeholder="ingresa la cedula de quien renuncia">
             <label>Telefono de quien renuncia</label>
-            <input type="text" name="telefono_renunciante" placeholder="ingresa el telefono de quien renuncia">
+            <input type="number" name="telefono_renunciante" placeholder="ingresa el telefono de quien renuncia">
             <input type="submit" value="enviar">
         </form>
 

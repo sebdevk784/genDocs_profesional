@@ -25,9 +25,9 @@
             <label>Nombre del recomendado:</label>
             <input type="text" name="nombre_recomendado" placeholder="ingresa el nombre del que estan recomendando">
             <label>Documento del recomendado</label>
-            <input type="text" name="documento_recomendado" placeholder="ingresa el documento del recomendado">
+            <input type="number" name="documento_recomendado" placeholder="ingresa el documento del recomendado">
             <label>numero de años o meses de conocerse</label>
-            <input type="text" name="tiempo_conocidos" placeholder="ingrese el numero de tiempo que llevan de conocerse">
+            <input type="number" name="tiempo_conocidos" placeholder="ingrese el numero de tiempo que llevan de conocerse">
             <label>meses/años de conocerse</label>
             <select name="unidad_tiempo_conocidos">
                 <option value="año">Año</option>
@@ -45,9 +45,9 @@
                 <option value="CE">Cédula de extrangería</option>
             </select>
             <label>Número de cédula de quien recomienda</label>
-            <input type="text" name="cedula_recomendador" placeholder="ingresa la cedula de quien recomienda">
+            <input type="number" name="cedula_recomendador" placeholder="ingresa la cedula de quien recomienda">
             <label>Telefono de quien recomienda</label>
-            <input type="text" name="telefono_recomendador" placeholder="ingresa el telefono de quien recomienda">
+            <input type="number" name="telefono_recomendador" placeholder="ingresa el telefono de quien recomienda">
             <input type="submit" value="enviar">
         </form>
     </div>

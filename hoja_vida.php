@@ -58,7 +58,7 @@
       <label>Foto:</label>
       <input type="file" name="foto">
       <label>Documento de identidad:</label>
-      <input type="text" name="documento_identidad" placeholder="ingresa solo el numero de documento">
+      <input type="number" name="documento_identidad" placeholder="ingresa solo el numero de documento">
       <label>Fecha de nacimiento:</label>
       <input type="date" name="fecha_nacimiento">
       <label>Estado civil:</label>
@@ -68,9 +68,9 @@
       <label>Barrio:</label>
       <input type="text" name="barrio" placeholder="solo el nombre del barrio">
       <label>Celular:</label>
-      <input type="text" name="celular">
+      <input type="number" name="celular">
       <label>Correo:</label>
-      <input type="text" name="correo" placeholder="ingresa el correo personal">
+      <input type="email" name="correo" placeholder="ingresa el correo personal">
       <!--seccion formacion academica -->
       <div id="formacion_academica">
         <h2>FORMACION ACADEMICA.</h2><br>
@@ -81,7 +81,7 @@
           <label>Titulo obtenido:</label>
           <input type="text" name="titulo_obtenido[]" placeholder="primaria/secundaria/otro">
           <label>Año:</label>
-          <input type="text" name="año_graduacion[]" placeholder="ingresa el año de graduación">
+          <input type="number" name="año_graduacion[]" placeholder="ingresa el año de graduación">
         </div>
       </div>
       <button type="button" onclick="agregar_referencias('formacion_academica')">agregar formación acádemica</button>
@@ -98,9 +98,9 @@
           <label>Nombre del jefe:</label>
           <input type="text" name="nombre_jefe[]">
           <label>Telefono:</label>
-          <input type="text" name="telefono_empresa[]" placeholder="numero del telefono de la empresa">
+          <input type="number" name="telefono_empresa[]" placeholder="numero del telefono de la empresa">
           <label>Duración en la empresa:</label>
-          <input type="text" name="numero_duracion_empresa[]">
+          <input type="number" name="numero_duracion_empresa[]">
           <select name="unidad_duracion_empresa[]">
             <option value="año">Año</option>
             <option value="años" selected>Años</option>
@@ -122,7 +122,7 @@
           <label>Ocupacion de la referencia:</label>
           <input type="text" name="ocupacion_referencia_familiar[]">
           <label>Celular de la referencia:</label>
-          <input type="text" name="celular_referencia_familiar[]">
+          <input type="number" name="celular_referencia_familiar[]">
         </div>
       </div>
       <button type="button" onclick="agregar_referencias('referencias_familiares')">agregar referencia familiar</button>
@@ -137,7 +137,7 @@
           <label>Ocupacion de la referencia:</label>
           <input type="text" name="ocupacion_referencia_personal[]">
           <label>Celular de la referencia:</label>
-          <input type="text" name="celular_referencia_personal[]">
+          <input type="number" name="celular_referencia_personal[]">
         </div>
       </div>
       <button type="button" onclick="agregar_referencias('referencias_personales')">agregar referencia personal</button>

@@ -43,7 +43,7 @@ $fecha_redaccion_formateada = $date_redaccion->format('d') . ' de ' . $mes_redac
         <h4>A quien corresponda:</h4>
         <h5>Reciba un cordial y respetuoso saludo.</h5>
         <p class="cuerpo_carta">
-            Mediante la presente, me permito recomendar a <?php echo $nombre_recomendado ?>, identificado con
+            Mediante la presente, me permito recomendar a <?php echo $nombre_recomendado ?>, quien se identifica con
             documento N°. <?php echo $documento_recomendado ?>. He tenido el gusto de conocerlo durante los últimos <?php echo $tiempo_conocidos . " " . $unidad_tiempo_conocidos . ", " ?> y puedo afirmar que es una persona íntegra, responsable y trabajadora.
         </p>
         <p class="cuerpo_carta">
