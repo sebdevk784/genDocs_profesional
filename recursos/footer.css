@@ -36,7 +36,8 @@
     width: 10vw;
     margin-left: 3vw;
 }
-
+/*se parte desde la media query 1200px ya que con los estilos anteriores se empezaba
+a deformar mucho el estilo del footer.*/
 @media(max-width:1200px){
     .footer{
         font-size: 5vw;

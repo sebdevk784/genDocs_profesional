@@ -1,17 +1,16 @@
 body, h5{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
 }
 .contenido{
-   margin-left: 3cm;
-   margin-right: 3cm;
-   margin-bottom: 2.5cm;
+   margin-left: 2.5cm;
+   margin-right: 2.5cm;
+   margin-bottom: 2cm;
    
 }
 header{
-
     background-color: #e0e0e0;
-    height: 2.5cm;
+    height: 2cm;
 }
 h1{
  text-align: center;
