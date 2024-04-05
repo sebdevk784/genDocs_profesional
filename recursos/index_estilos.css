@@ -2,5 +2,46 @@ body{
     margin: 0;
     padding: 0;
     font-family:'Times New Roman', Times, serif;
+    
     background-color: #eeeeee;
+}
+.contenido{
+    margin: 0 auto;
+    width: 70%;
+    font-size: 1.75vw;
+    text-align: center;
+    background-color: #fff;
+    padding: 5%;
+}
+.descripcion p{
+    text-align: justify;
+}
+
+.demostracion p{
+    text-align: justify;
+}
+.demostracion a{
+    color: #000 !important;
+}
+.demostracion a:hover{
+    color: #757575 !important;
+}
+.demo img{
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.demo img:hover{
+    height: 50vw;
+}
+
+@media(max-width:800px){
+    .contenido{
+        width: 90%;
+        font-size: 4.5vw;
+    }
+    .demo img{
+        height: 85vw;
+    }
 }

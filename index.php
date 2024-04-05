@@ -13,10 +13,6 @@
     include "./navbar_template.php";
     ?>
 </header>
-<!--Insertar documentación de l sitio web, iconos para seleccionar crear hoja de vida, carta de renuncia 
-o recomendacion.
-Insertar texto y videos del funcionamiento del sitio web para que sea mas claro para un usuario el cómo navegar
-por aca :)-->
 
 <body>
     <div class="contenido">
@@ -34,19 +30,25 @@ por aca :)-->
             <div class="demo">
                 <h2>CARTA DE RENUNCIA</h2>
                 <img src="./recursos/img/carta_recomendacion_demo.jpeg" alt="demo carta de renuncia">
-                <p>los datos proporcionados en esta demo son ficticios, cualquier parecido es coincidencia</p>
+                <p>Los datos proporcionados aquí son ficticios, y su único propósito es mostrar el formato
+                    utilizado por nuestro sitio web. Cualquier parecido es pura coincidencia.</p>
+                <p><a href="./carta_renuncia.php">Click aquí</a> para redactar tu carta de renuncia.</p>
             </div>
             <div class="demo">
                 <h2>CARTA DE RECOMENDACION</h2>
                 <img src="./recursos/img/carta_recomendacion_demo.jpeg" alt="demo carta de recomendación personal">
-                <p>los datos proporcionados en esta demo son ficticios, cualquier parecido es coincidencia</p>
+                <p>Los datos proporcionados aquí son ficticios, y su único propósito es mostrar el formato
+                    utilizado por nuestro sitio web. Cualquier parecido es pura coincidencia.</p>
+                <p><a href="./carta_recomendacion_personal.php">Click aquí</a> para redactar tu carta de recomendación personal.</p>
             </div>
             <div class="demo">
                 <h2>HOJA DE VIDA</h2>
                 <img src="./recursos/img/hoja_vida_1_demo.jpeg" alt="demo hoja de vida página 1">
                 <img src="./recursos/img/hoja_vida_2_demo.jpeg" alt="demo hoja de vida página 2">
                 <img src="./recursos/img/hoja_vida_3_demo.jpeg" alt="demo hoja de vida página 3">
-                <p>los datos proporcionados en esta demo son ficticios, cualquier parecido es coincidencia</p>
+                <p>Los datos proporcionados aquí son ficticios, y su único propósito es mostrar el formato
+                    utilizado por nuestro sitio web. Cualquier parecido es pura coincidencia.</p>
+                <p><a href="./hoja_vida.php">Click aquí</a> para realizar tu hoja de vida</p>
             </div>
         </div>
     </div>
