@@ -1,0 +1,99 @@
+/* Estilos de los PDF (dompdf 2: CSS 2.1 con algunas propiedades CSS3; sin variables, flex ni grid).
+   Los documentos son sobrios: texto casi negro sobre blanco para impresión, con el azul noche y
+   el índigo de la marca solo en títulos y filetes. Valores literales porque dompdf no admite var(). */
+@page { margin: 2.2cm 2.5cm 2cm 2.5cm; }
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11.5pt;
+    line-height: 1.5;
+    color: #1d1f33;
+}
+p { margin: 0 0 10pt 0; }
+strong { color: #040336; }
+
+/* ---------- Cartas ---------- */
+.filete { height: 3pt; background: #482693; margin: 0 0 28pt 0; }
+.lugar-fecha { text-align: right; margin-bottom: 30pt; }
+.destinatario { margin-bottom: 18pt; line-height: 1.35; }
+.destinatario p { margin: 0; }
+.asunto { margin-bottom: 18pt; }
+.saludo { margin-bottom: 12pt; }
+.cuerpo { text-align: justify; }
+.despedida { margin-top: 18pt; margin-bottom: 56pt; }
+.firma p { margin: 0; line-height: 1.4; }
+.firma__linea { width: 7cm; border-top: 1pt solid #1d1f33; margin-bottom: 4pt; }
+
+/* ---------- Hoja de vida ---------- */
+.cv-cabecera { width: 100%; border-collapse: collapse; margin-bottom: 6pt; }
+.cv-cabecera td { vertical-align: middle; padding: 0; }
+.cv-cabecera__foto { width: 3.2cm; text-align: right; }
+.cv-foto { width: 3cm; height: 4cm; border: 1pt solid #bfc7d5; }
+.cv-nombre { font-size: 22pt; line-height: 1.1; font-weight: bold; color: #040336; margin: 0 0 4pt 0; text-transform: uppercase; letter-spacing: 0.5pt; }
+.cv-profesion { font-size: 12.5pt; color: #482693; margin: 0 0 8pt 0; }
+.cv-contacto { font-size: 10pt; color: #4a4e6b; margin: 0; }
+.cv-titulo-doc { font-size: 9pt; letter-spacing: 2pt; color: #4a4e6b; margin: 0 0 4pt 0; text-transform: uppercase; }
+
+.cv-seccion { margin-top: 16pt; }
+.cv-seccion h2 {
+    font-size: 11pt; text-transform: uppercase; letter-spacing: 1.5pt; color: #040336;
+    margin: 0 0 8pt 0; padding-bottom: 3pt; border-bottom: 1.5pt solid #482693;
+}
+.cv-perfil { text-align: justify; }
+.cv-datos { width: 100%; border-collapse: collapse; }
+.cv-datos td { padding: 2.5pt 0; vertical-align: top; }
+.cv-datos td.etiqueta { width: 4.6cm; font-weight: bold; color: #040336; }
+.cv-item { margin-bottom: 9pt; page-break-inside: avoid; }
+.cv-item p { margin: 0; line-height: 1.4; }
+.cv-item__titulo { font-weight: bold; color: #040336; text-transform: uppercase; }
+.cv-item__detalle { color: #4a4e6b; font-size: 10.5pt; }
+.cv-firma { margin-top: 18pt; page-break-inside: avoid; }
+.cv-firma .firma__linea { margin-top: 30pt; }
+.cv-item__texto { text-align: justify; margin-top: 2pt !important; }
+
+/* ---------- Hoja de vida «Dos columnas» ----------
+   Basada en el formato .docx del propietario (barra lateral con foto, contacto y referencias)
+   con la identidad de marca sebasdev784: barra azul noche, filo violeta eléctrico y trazos
+   violeta → cian → menta bajo los títulos. Los neón solo aparecen como líneas y títulos cortos
+   de la barra (nunca en texto largo). La barra es fija (se repite en cada página); su contenido
+   va en la primera. dompdf no carga woff2, por eso usa Helvetica (sans, cercana a Inter). */
+.dc { font-family: Helvetica, Arial, sans-serif; font-size: 10.5pt; line-height: 1.4; color: #1d1f33; }
+.dc strong { color: #040336; }
+.dc-barra { position: fixed; top: -1.5cm; bottom: -1.5cm; left: 0; width: 6.6cm; background: #040336; }
+.dc-filo { position: fixed; top: -1.5cm; bottom: -1.5cm; left: 6.6cm; width: 3pt; background: #6e00ff; }
+/* Ancho de contenido 5,4 cm + 0,6 cm de relleno a cada lado = 6,6 cm de la barra. */
+.dc-lateral { position: absolute; top: 0.4cm; left: 0; width: 5.4cm; padding: 0 0.6cm; color: #f5f7fa; font-size: 9.5pt; }
+.dc-lateral p { margin: 0 0 6pt 0; line-height: 1.3; }
+.dc-foto-caja { text-align: center; margin: 0.6cm 0 0.8cm 0; }
+.dc-foto { width: 3.4cm; height: 4.5cm; border: 2pt solid #9e6ce0; }
+.dc-lateral h2 { font-size: 10pt; font-weight: bold; text-align: center; letter-spacing: 2pt; color: #00f0b5; margin: 20pt 0 4pt 0; text-transform: uppercase; }
+.dc-lateral h2.dc-primero { margin-top: 0; }
+.dc-ref { margin-bottom: 9pt; }
+.dc-ref p { margin: 0; }
+.dc-ref__nombre { text-transform: uppercase; font-weight: bold; color: #f5f7fa; }
+.dc-ref__dato { color: #bfc7d5; }
+.dc-principal { margin-left: 7.4cm; }
+.dc-nombre { font-size: 25pt; font-weight: bold; text-align: center; margin: 0; line-height: 1.1; color: #040336; letter-spacing: -0.3pt; }
+.dc-profesion { text-align: center; font-size: 10pt; margin: 5pt 0 0 0; color: #482693; text-transform: uppercase; letter-spacing: 2.5pt; }
+.dc-principal h2 { font-size: 12pt; text-align: center; text-transform: uppercase; letter-spacing: 2pt; color: #040336; margin: 18pt 0 3pt 0; }
+.dc-texto { text-align: justify; margin: 8pt 0 6pt 0; }
+.dc-item { margin-bottom: 9pt; page-break-inside: avoid; }
+.dc-item p { margin: 0; text-align: justify; }
+.dc-item__titulo { font-weight: bold; color: #040336; }
+.dc-item__titulo span { color: #482693; font-weight: normal; }
+.dc-cargo { font-weight: bold; color: #482693; }
+.dc-institucion { font-weight: bold; text-transform: uppercase; color: #040336; }
+.dc-proyecto { font-weight: bold; color: #482693; }
+.dc-detalle { font-size: 9.5pt; color: #4a4e6b; }
+.dc .cv-firma { margin-top: 28pt; }
+.dc .firma__linea { border-top: 1.5pt solid #6e00ff; }
+
+/* Trazo de marca: tres segmentos violeta, cian y menta (dompdf no admite degradados). */
+.dc-trazo { border-collapse: collapse; margin: 0 auto 8pt auto; }
+.dc-trazo td { height: 2.5pt; padding: 0; font-size: 1pt; line-height: 1pt; }
+.dc-trazo--corto { width: 2.6cm; }
+.dc-trazo--lateral { width: 2cm; margin-bottom: 9pt; }
+.dc-trazo--ancho { width: 100%; margin: 10pt 0 2pt 0; }
+.dc-trazo--ancho td { height: 3pt; }
+.dc-trazo .v { background: #6e00ff; width: 50%; }
+.dc-trazo .c { background: #11f5ea; width: 25%; }
+.dc-trazo .m { background: #00f0b5; width: 25%; }
