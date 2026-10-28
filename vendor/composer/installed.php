@@ -3,7 +3,7 @@
         'name' => 'sebasdev784/gendocs',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f8ac640cb5008b97969e221bbe3219937ad28b35',
+        'reference' => 'a617a71f576cfc2cd573f43f13c0578aff78ec32',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -58,7 +58,7 @@
         'sebasdev784/gendocs' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f8ac640cb5008b97969e221bbe3219937ad28b35',
+            'reference' => 'a617a71f576cfc2cd573f43f13c0578aff78ec32',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

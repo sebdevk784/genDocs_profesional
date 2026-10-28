@@ -3,12 +3,12 @@
     "description": "Generador de hojas de vida y cartas laborales en PDF",
     "license": "CC-BY-SA-4.0",
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.4.27",
         "dompdf/dompdf": "^3.1"
     },
     "config": {
         "platform": {
-            "php": "8.0.30"
+            "php": "8.4.27"
         },
         "optimize-autoloader": true,
         "sort-packages": true

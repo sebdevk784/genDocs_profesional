@@ -20,7 +20,8 @@ final class Preferencias
 
     public function __construct(?string $tema = null, int $fuente = self::FUENTE_NORMAL)
     {
-        $this->tema = isset(self::TEMAS[$tema]) ? $tema : null;
+        // Se descarta null antes de usarlo como índice: PHP 8.5 lo marca como obsoleto.
+        $this->tema = $tema !== null && isset(self::TEMAS[$tema]) ? $tema : null;
         $this->fuente = max(self::FUENTE_MINIMA, min(self::FUENTE_MAXIMA, $fuente));
     }
 
@@ -59,7 +60,7 @@ final class Preferencias
     /** Aplica la acción de un botón: tema=claro|oscuro o fuente=menos|normal|mas. */
     public function aplicar(?string $tema, ?string $fuente): self
     {
-        $nuevoTema = isset(self::TEMAS[$tema]) ? $tema : $this->tema;
+        $nuevoTema = $tema !== null && isset(self::TEMAS[$tema]) ? $tema : $this->tema;
         switch ($fuente) {
             case 'menos':
                 $nuevaFuente = $this->fuente - 1;
